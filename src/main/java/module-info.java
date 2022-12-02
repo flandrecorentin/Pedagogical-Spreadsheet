@@ -5,4 +5,6 @@ module com.spreadsheet.pedagogicalspreadsheet {
 
     opens com.spreadsheet.pedagogicalspreadsheet to javafx.fxml;
     exports com.spreadsheet.pedagogicalspreadsheet;
+    exports com.spreadsheet.pedagogicalspreadsheet.view;
+
 }

@@ -3,7 +3,7 @@ package com.spreadsheet.pedagogicalspreadsheet;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class TestController {
     @FXML
     private Label welcomeText;
 

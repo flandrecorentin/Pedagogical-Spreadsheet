@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.spreadsheet.pedagogicalspreadsheet/com.spreadsheet.pedagogicalspreadsheet.HelloApplication
+                                com.spreadsheet.pedagogicalspreadsheet/com.spreadsheet.pedagogicalspreadsheet.view.Window
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
