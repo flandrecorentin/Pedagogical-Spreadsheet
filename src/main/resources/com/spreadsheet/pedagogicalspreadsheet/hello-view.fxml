@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.spreadsheet.pedagogicalspreadsheet.TestController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.TestController">
+   <children>
+      <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
+         <children>
+            <Button fx:id="openSpreadsheetButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openSpreadsheet" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Ouvrir une feuille de calcul">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="70.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="newSpreadsheetButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newSpreadsheet" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Nouvelle feuille de calcul">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="settingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Paramètres du tableur">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </Button>
+            <Pane prefHeight="203.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+            <Button fx:id="discoverGamesButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#discoverGames" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Découvrir les jeux">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Pane prefHeight="327.0" prefWidth="308.0" />
+            <TextArea text="Ceci est la superbe description de notre application méga trop bien on va gagner des millions ! j'ai hâte" wrapText="true" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </children>
+</HBox>

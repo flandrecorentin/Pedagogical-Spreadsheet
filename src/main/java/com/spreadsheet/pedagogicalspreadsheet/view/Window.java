@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+
 import java.io.IOException;
 
 public class Window extends Application {
@@ -13,8 +15,10 @@ public class Window extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
         stage.setTitle("Hello!");
+        stage.setMinWidth(640);
+        stage.setMinHeight(480);
         stage.setScene(scene);
         stage.show();
     }
