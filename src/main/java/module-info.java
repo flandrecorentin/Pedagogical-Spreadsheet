@@ -4,7 +4,7 @@ module com.spreadsheet.pedagogicalspreadsheet {
     requires slf4j.api;
 
 
-    opens com.spreadsheet.pedagogicalspreadsheet to javafx.fxml;
+    opens com.spreadsheet.pedagogicalspreadsheet.controller to javafx.fxml;
     exports com.spreadsheet.pedagogicalspreadsheet;
     exports com.spreadsheet.pedagogicalspreadsheet.view;
 
