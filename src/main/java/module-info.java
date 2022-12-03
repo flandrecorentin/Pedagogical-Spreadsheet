@@ -1,6 +1,7 @@
 module com.spreadsheet.pedagogicalspreadsheet {
     requires javafx.controls;
     requires javafx.fxml;
+    requires slf4j.api;
 
 
     opens com.spreadsheet.pedagogicalspreadsheet to javafx.fxml;
