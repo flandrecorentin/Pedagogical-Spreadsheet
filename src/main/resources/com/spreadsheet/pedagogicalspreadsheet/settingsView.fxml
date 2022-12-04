@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
+   <children>
+      <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
+         <children>
+            <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Global">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="70.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="languageSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#languageSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Langues">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="colorSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Couleurs">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </Button>
+            <Pane prefHeight="203.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <VBox prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Pane prefHeight="327.0" prefWidth="308.0" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

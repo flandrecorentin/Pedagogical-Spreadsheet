@@ -30,6 +30,15 @@ public class Controller {
     private Button settingsButton;
 
     @FXML
+    private Button colorSettingsButton;
+
+    @FXML
+    private Button globalSettingsButton;
+
+    @FXML
+    private Button languageSettingsButton;
+
+    @FXML
     void discoverGames(ActionEvent event) {
         System.out.println("aller dans la page découvrir jeu");
 
@@ -50,7 +59,20 @@ public class Controller {
         System.out.println("ouvrir une feuille de calcul");
     }
 
+    @FXML
+    void colorSettings(ActionEvent event) {
 
+    }
+
+    @FXML
+    void globalSettings(ActionEvent event) {
+
+    }
+
+    @FXML
+    void languageSettings(ActionEvent event) {
+
+    }
     // ******************* FXML ****************
 
 

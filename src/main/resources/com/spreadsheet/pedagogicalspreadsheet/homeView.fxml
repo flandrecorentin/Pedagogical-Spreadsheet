@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
       <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
@@ -42,7 +41,7 @@
       <VBox prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
          <children>
             <Pane prefHeight="327.0" prefWidth="308.0" />
-            <TextArea text="Ceci est la superbe description de notre application méga trop bien on va gagner des millions ! j'ai hâte" wrapText="true" VBox.vgrow="ALWAYS">
+            <TextArea editable="false" text="Ceci est la superbe description de notre application méga trop bien on va gagner des millions ! j'ai hâte" wrapText="true" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" left="10.0" right="10.0" />
                </VBox.margin>
