@@ -1,5 +1,6 @@
 package com.spreadsheet.pedagogicalspreadsheet.controller;
 
+import com.spreadsheet.pedagogicalspreadsheet.view.Window;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +13,29 @@ public class Controller {
     private static final Logger logger = LoggerFactory.getLogger(Controller.class);
 
 
+    // ******************* STATE ****************
+
+
+    // List of all States possibles
+    protected static final State homeState = new HomeState();
+
+    protected static final State settingGlobalState = new SettingGlobalState();
+
+
+
+
+
+    // Declaration of the current state : home at the start of the application
+    private static State currentState = homeState;
+
+    // Window
+    private static Window window;
+
+    public Controller() {
+        /* this.listeCommandes = new ListOfCommands(); */
+    }
+
+    // ******************* STATE ****************
 
 
 
@@ -46,6 +70,7 @@ public class Controller {
 
     @FXML
     void goToSettings(ActionEvent event) {
+        displayParameterWindow();
         System.out.println("aller dans la page paramètres");
     }
 
@@ -88,6 +113,15 @@ public class Controller {
     // ************ CONTROLLER ***********************
     public String JUnitTest(){
         return "Hello";
+    }
+
+    public void displayParameterWindow(){
+        try {
+            currentState.displayParameterWindow(this, window);
+        }
+        catch (Exception ex){
+            logger.error("problem displayParameterWindow");
+        }
     }
 
     // ************ CONTROLLER ***********************
