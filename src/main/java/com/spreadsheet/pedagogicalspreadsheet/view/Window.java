@@ -14,21 +14,31 @@ import java.io.IOException;
 
 public class Window extends Application {
 
+    // TODO Instaurer un fichier de configuration Log4j2 -> cela afficher uniquement les erreurs dans la console
     // Logger for the Window class
     private static final Logger logger = LoggerFactory.getLogger(Window.class);
+    private Stage windowStage;
     @Override
     public void start(Stage stage) throws IOException {
+        this.windowStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("homeView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
-        stage.setTitle("Hello!");
-        stage.setMinWidth(640);
-        stage.setMinHeight(480);
-        stage.setScene(scene);
-        stage.show();
+        this.windowStage.setTitle("Home [Pedagogical-Spreadsheet]");
+        this.windowStage.setMinWidth(640);
+        this.windowStage.setMinHeight(480);
+        this.windowStage.setScene(scene);
+        this.windowStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public Stage getWindowStage() {
+        return windowStage;
+    }
+
+    public void setWindowStage(Stage windowStage) {
+        this.windowStage = windowStage;
     }
 }
