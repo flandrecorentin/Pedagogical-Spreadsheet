@@ -5,6 +5,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
@@ -12,12 +15,12 @@
          <children>
             <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Global">
                <VBox.margin>
-                  <Insets bottom="20.0" left="30.0" right="30.0" top="70.0" />
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="100.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="languageSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#languageSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Langues">
                <VBox.margin>
-                  <Insets bottom="20.0" left="30.0" right="30.0" />
+                  <Insets bottom="30.0" left="30.0" right="30.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="colorSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Couleurs">
@@ -25,12 +28,32 @@
                   <Insets left="30.0" right="30.0" />
                </VBox.margin>
             </Button>
-            <Pane prefHeight="203.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+            <Pane prefHeight="143.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
-      <VBox prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+      <VBox fx:id="globalPannel" prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
          <children>
-            <Pane prefHeight="327.0" prefWidth="308.0" />
+            <Pane prefHeight="419.0" prefWidth="308.0" style="-fx-background-color: F0F0F0;" VBox.vgrow="ALWAYS" />
+            <TextFlow prefHeight="33.0" prefWidth="308.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Site web : " textAlignment="CENTER" wrappingWidth="127.087890625">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="        www.sib&amp;cocoLesMeilleurs.fr" wrappingWidth="154.06640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+            </TextFlow>
          </children>
       </VBox>
    </children>
