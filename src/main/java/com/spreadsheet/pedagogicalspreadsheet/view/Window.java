@@ -18,6 +18,10 @@ public class Window extends Application {
     // Logger for the Window class
     private static final Logger logger = LoggerFactory.getLogger(Window.class);
     private Stage windowStage;
+
+    public Window() {
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         this.windowStage = stage;
