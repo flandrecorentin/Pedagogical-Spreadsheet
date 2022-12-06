@@ -17,7 +17,9 @@ public class HomeState implements  State{
     public void displayParameterWindow(Controller c) throws IOException {
         logger.trace("start displayParameterWindow(Controller c, Window w)");
         FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("settingsView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        double width = Window.windowStage.getWidth();
+        double height = Window.windowStage.getHeight();
+        Scene scene = new Scene(fxmlLoader.load(), width, height);
         Window.windowStage.setTitle("Parameters [Pedagogical-Spreadsheet]");
         Window.windowStage.setScene(scene);
         c.setCurrentState(c.settingGlobalState);

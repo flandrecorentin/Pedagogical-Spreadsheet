@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
@@ -9,24 +10,36 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
       <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
          <children>
-            <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Global">
+            <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" text="Global">
                <VBox.margin>
                   <Insets bottom="30.0" left="30.0" right="30.0" top="100.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="button-principal" />
+                  <String fx:value="button-principal-hover" />
+               </styleClass>
             </Button>
-            <Button fx:id="languageSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#languageSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Langues">
+            <Button fx:id="languageSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#languageSettings" prefHeight="40.0" prefWidth="240.0" text="Langues">
                <VBox.margin>
                   <Insets bottom="30.0" left="30.0" right="30.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="button-principal" />
+                  <String fx:value="button-principal-hover" />
+               </styleClass>
             </Button>
-            <Button fx:id="colorSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorSettings" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: F5EDE7; -fx-border-color: black; -fx-border-width: 2;" text="Couleurs">
+            <Button fx:id="colorSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#colorSettings" prefHeight="40.0" prefWidth="240.0" text="Couleurs">
                <VBox.margin>
                   <Insets left="30.0" right="30.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="button-principal" />
+                  <String fx:value="button-principal-hover" />
+               </styleClass>
             </Button>
             <Pane prefHeight="143.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
          </children>
