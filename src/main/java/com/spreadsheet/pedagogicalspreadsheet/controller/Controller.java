@@ -12,8 +12,18 @@ public class Controller {
     // Logger for the Controller class
     private static final Logger logger = LoggerFactory.getLogger(Controller.class);
 
+    public Controller() {
+        /* this.listeCommandes = new ListOfCommands(); */
+    }
 
-    // ******************* STATE ****************
+
+
+
+
+
+
+
+// ******************* STATE ****************
 
 
     // List of all States possibles
@@ -28,14 +38,18 @@ public class Controller {
     // Declaration of the current state : home at the start of the application
     private static State currentState = homeState;
 
-    // Window
-    private static Window window;
+    public static State getCurrentState() {
+        return currentState;
+    }
 
-    public Controller() {
-        /* this.listeCommandes = new ListOfCommands(); */
+    protected static void setCurrentState(State currentState) {
+        Controller.currentState = currentState;
     }
 
     // ******************* STATE ****************
+
+
+
 
 
 
@@ -117,10 +131,11 @@ public class Controller {
 
     public void displayParameterWindow(){
         try {
-            currentState.displayParameterWindow(this, window);
+            currentState.displayParameterWindow(this);
         }
         catch (Exception ex){
-            logger.error("problem displayParameterWindow");
+            logger.error("**!** problem displayParameterWindow **!** ");
+            ex.printStackTrace();
         }
     }
 

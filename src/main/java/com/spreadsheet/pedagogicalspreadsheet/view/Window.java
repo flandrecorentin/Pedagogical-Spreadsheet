@@ -1,6 +1,7 @@
 package com.spreadsheet.pedagogicalspreadsheet.view;
 
 import com.spreadsheet.pedagogicalspreadsheet.PedagogicalSpreadsheet;
+import com.spreadsheet.pedagogicalspreadsheet.controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,13 +18,17 @@ public class Window extends Application {
     // TODO Instaurer un fichier de configuration Log4j2 -> cela afficher uniquement les erreurs dans la console
     // Logger for the Window class
     private static final Logger logger = LoggerFactory.getLogger(Window.class);
-    private Stage windowStage;
+    public static Stage windowStage;
+    private final Controller controller;
 
     public Window() {
+        logger.trace("Builder Window()");
+        this.controller = new Controller();
     }
 
     @Override
     public void start(Stage stage) throws IOException {
+        logger.trace("start @Override start of application");
         this.windowStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("homeView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
@@ -32,6 +37,7 @@ public class Window extends Application {
         this.windowStage.setMinHeight(480);
         this.windowStage.setScene(scene);
         this.windowStage.show();
+        logger.trace("end @Override start of application");
     }
 
     public static void main(String[] args) {
