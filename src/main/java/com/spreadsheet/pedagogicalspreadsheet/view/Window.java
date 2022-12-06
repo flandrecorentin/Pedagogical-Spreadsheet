@@ -46,11 +46,5 @@ public class Window extends Application {
         launch(args);
     }
 
-    public Stage getWindowStage() {
-        return windowStage;
-    }
 
-    public void setWindowStage(Stage windowStage) {
-        this.windowStage = windowStage;
-    }
 }

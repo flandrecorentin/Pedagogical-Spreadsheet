@@ -49,8 +49,8 @@
                   <Insets bottom="30.0" left="30.0" right="30.0" />
                </VBox.margin>
                <styleClass>
-                  <String fx:value="button-principal" />
                   <String fx:value="button-principal-hover" />
+                  <String fx:value="button-principal" />
                </styleClass>
             </Button>
          </children>

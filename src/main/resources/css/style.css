@@ -7,3 +7,9 @@
     -fx-border-color: black;
     -fx-border-width: 2;
 }
+
+.button-principal-active{
+    -fx-background-color: B9ACA2;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}

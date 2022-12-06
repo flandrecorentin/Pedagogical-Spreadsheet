@@ -14,15 +14,15 @@ public class HomeState implements  State{
     // Logger for the HomeState class
     private static final Logger logger = LoggerFactory.getLogger(HomeState.class);
 
-    public void displayParameterWindow(Controller c) throws IOException {
-        logger.trace("start displayParameterWindow(Controller c, Window w)");
+    public void displayParameterGlobalWindow(Controller c) throws IOException {
+        logger.trace("start displayParameterGlobalWindow(Controller c)");
         FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("settingsView.fxml"));
         double width = Window.windowStage.getWidth();
         double height = Window.windowStage.getHeight();
         Scene scene = new Scene(fxmlLoader.load(), width, height);
         Window.windowStage.setTitle("Parameters [Pedagogical-Spreadsheet]");
         Window.windowStage.setScene(scene);
-        c.setCurrentState(c.settingGlobalState);
-        logger.trace("end displayParameterWindow(Controller c, Window w)");
+        Controller.setCurrentState(c.settingGlobalState);
+        logger.trace("end displayParameterGlobalWindow(Controller c)");
     }
 }
