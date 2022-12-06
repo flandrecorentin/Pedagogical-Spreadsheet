@@ -5,6 +5,7 @@ import com.spreadsheet.pedagogicalspreadsheet.controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +37,7 @@ public class Window extends Application {
         this.windowStage.setMinWidth(640);
         this.windowStage.setMinHeight(480);
         this.windowStage.setScene(scene);
+        this.windowStage.getIcons().add(new Image(getClass().getResource("/images/icon128-temporaire.png").toExternalForm()));
         this.windowStage.show();
         logger.trace("end @Override start of application");
     }
