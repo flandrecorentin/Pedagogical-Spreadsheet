@@ -9,7 +9,10 @@ public interface State {
 
 
 
-    public default void displayParameterWindow(Controller c, Window w) throws IOException {};
+    default void displayParameterGlobalWindow(Controller c) throws IOException {};
 
-    public default void displayHomeWindow(Controller c, Window w){};
+    default void displayParameterColorWindow(Controller c) {};
+    default void displayParameterLanguageWindow(Controller c) {};
+
+    default void displayHomeWindow(Controller c){};
 }

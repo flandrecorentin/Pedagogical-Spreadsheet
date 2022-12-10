@@ -1,0 +1,15 @@
+.button-principal-hover: hover {
+      -fx-underline: true;
+}
+
+.button-principal{
+    -fx-background-color: F5EDE7;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.button-principal-active{
+    -fx-background-color: B9ACA2;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
