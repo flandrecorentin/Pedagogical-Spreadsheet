@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
+<HBox fx:id="SettingsPannel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
       <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
          <children>
@@ -44,7 +45,7 @@
             <Pane prefHeight="143.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
-      <VBox fx:id="globalPannel" prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+      <VBox fx:id="globalSettingsPannel" prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
          <children>
             <Pane prefHeight="419.0" prefWidth="308.0" style="-fx-background-color: F0F0F0;" VBox.vgrow="ALWAYS" />
             <TextFlow prefHeight="33.0" prefWidth="308.0">
@@ -67,6 +68,16 @@
                   <Insets bottom="70.0" />
                </VBox.margin>
             </TextFlow>
+         </children>
+      </VBox>
+      <VBox fx:id="languageSettingsPannel" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" style="-fx-background-color: red;" visible="false" HBox.hgrow="ALWAYS">
+         <children>
+            <TextField editable="false" text="Languages" />
+         </children>
+      </VBox>
+      <VBox fx:id="colorsSettingsPannel" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" style="-fx-background-color: red;" visible="false" HBox.hgrow="ALWAYS">
+         <children>
+            <TextField editable="false" text="Colors" />
          </children>
       </VBox>
    </children>

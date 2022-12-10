@@ -1,8 +1,11 @@
 package com.spreadsheet.pedagogicalspreadsheet.controller;
 
+import com.spreadsheet.pedagogicalspreadsheet.view.Window;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,6 +78,32 @@ public class Controller {
 
     @FXML
     private Button settingsButton;
+    @FXML
+    private VBox languageSettingsPannel;
+
+
+    public VBox getLanguageSettingsPannel() {
+        return languageSettingsPannel;
+    }
+    public VBox getGlobalSettingsPannel() {
+        return globalSettingsPannel;
+    }
+    @FXML
+    private VBox globalSettingsPannel;
+
+    public VBox getColorsSettingsPannel() {
+        return colorsSettingsPannel;
+    }
+
+    @FXML
+    private VBox colorsSettingsPannel;
+
+    public HBox getSettingsPannel() {
+        return SettingsPannel;
+    }
+
+    @FXML
+    private HBox SettingsPannel;
 
     public Button getColorSettingsButton() {
         return colorSettingsButton;
