@@ -127,6 +127,12 @@ public class Controller {
     private Button languageSettingsButton;
 
     @FXML
+    private Button englishLanguageButton;
+
+    @FXML
+    private Button frenchLanguageButton;
+
+    @FXML
     void discoverGames(ActionEvent event) {
         logger.trace("Button listener discover games");
     }
@@ -163,6 +169,15 @@ public class Controller {
     void languageSettings(ActionEvent event) {
         this.displayParameterLanguageWindow();
         logger.trace("Button listener languages settings");
+    }
+    @FXML
+    void putEnglishLanguage(ActionEvent event) {
+        logger.trace("Button listener english language");
+    }
+
+    @FXML
+    void putFrenchLanguage(ActionEvent event) {
+        logger.trace("Button listener french language");
     }
     // ******************* FXML ****************
 

@@ -37,7 +37,7 @@ public class Window extends Application {
         this.windowStage.setMinWidth(640);
         this.windowStage.setMinHeight(480);
         this.windowStage.setScene(scene);
-        this.windowStage.getIcons().add(new Image(getClass().getResource("/images/icon128-temporaire.png").toExternalForm()));
+//        this.windowStage.getIcons().add(new Image(getClass().getResource("/images/icon128-temporaire.png").toExternalForm()));
         this.windowStage.show();
         logger.trace("end @Override start of application");
     }
