@@ -179,6 +179,50 @@ public class Controller {
     void putFrenchLanguage(ActionEvent event) {
         logger.trace("Button listener french language");
     }
+
+    @FXML
+    private Button blackTheme;
+
+    @FXML
+    private Button blueTheme;
+    @FXML
+    private Button greenTheme;
+    @FXML
+    private Button orangeTheme;
+
+    @FXML
+    private Button purpleTheme;
+
+    @FXML
+    private Button redTheme;
+    @FXML
+    void putBlackTheme(ActionEvent event) {
+        logger.trace("Button listener black theme");
+    }
+
+    @FXML
+    void putBlueTheme(ActionEvent event) {
+        logger.trace("Button listener blue theme");
+    }
+    @FXML
+    void putGreenTheme(ActionEvent event) {
+        logger.trace("Button listener green theme");
+    }
+
+    @FXML
+    void putOrangeTheme(ActionEvent event) {
+        logger.trace("Button listener orange theme");
+    }
+
+    @FXML
+    void putPurpleTheme(ActionEvent event) {
+        logger.trace("Button listener purple theme");
+    }
+
+    @FXML
+    void putRedTheme(ActionEvent event) {
+        logger.trace("Button listener red theme");
+    }
     // ******************* FXML ****************
 
 
