@@ -3,7 +3,6 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -13,7 +12,7 @@
 
 <HBox fx:id="SettingsPannel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="608.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
-      <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" style="-fx-background-color: A5D69D;">
+      <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" styleClass="pannel-principal-buttons">
          <children>
             <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="true" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" text="Global">
                <VBox.margin>
@@ -45,9 +44,9 @@
             <Pane prefHeight="143.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
-      <VBox fx:id="globalSettingsPannel" prefHeight="456.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+      <VBox fx:id="globalSettingsPannel" prefHeight="456.0" prefWidth="298.0" styleClass="pannel-optional-buttons" HBox.hgrow="ALWAYS">
          <children>
-            <Pane prefHeight="419.0" prefWidth="308.0" style="-fx-background-color: F0F0F0;" VBox.vgrow="ALWAYS" />
+            <Pane prefHeight="419.0" prefWidth="308.0" styleClass="pannel-optional-buttons" VBox.vgrow="ALWAYS" />
             <TextFlow prefHeight="33.0" prefWidth="308.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Site web : " textAlignment="CENTER" wrappingWidth="127.087890625">
@@ -70,7 +69,7 @@
             </TextFlow>
          </children>
       </VBox>
-      <VBox fx:id="languageSettingsPannel" alignment="TOP_CENTER" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" visible="false" HBox.hgrow="ALWAYS">
+      <VBox fx:id="languageSettingsPannel" alignment="TOP_CENTER" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" styleClass="pannel-optional-buttons" visible="false" HBox.hgrow="ALWAYS">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choix de la langue :" textAlignment="CENTER" wrappingWidth="307.13671875">
                <font>
@@ -102,9 +101,105 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="colorsSettingsPannel" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" style="-fx-background-color: red;" visible="false" HBox.hgrow="ALWAYS">
+      <VBox fx:id="colorsSettingsPannel" alignment="TOP_CENTER" cache="true" cacheShape="false" centerShape="false" fillWidth="false" maxWidth="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="298.0" scaleShape="false" styleClass="pannel-optional-buttons" visible="false" HBox.hgrow="ALWAYS">
          <children>
-            <TextField editable="false" text="Colors" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir le thème de couleurs : " textAlignment="CENTER" wrappingWidth="281.521484375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="114.0" prefWidth="257.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème vert :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="2.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème orange :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème rouge :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème bleu :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème violet :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème noir et blanc :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="177.0" prefWidth="74.0">
+                     <children>
+                        <Button fx:id="greenTheme" mnemonicParsing="false" onAction="#putGreenTheme" prefHeight="24.0" prefWidth="84.0" styleClass="button-color-theme-green">
+                           <VBox.margin>
+                              <Insets bottom="14.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="orangeTheme" mnemonicParsing="false" onAction="#putOrangeTheme" prefHeight="24.0" prefWidth="77.0" style="-fx-background-color: orange;">
+                           <VBox.margin>
+                              <Insets bottom="14.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="redTheme" mnemonicParsing="false" onAction="#putRedTheme" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: DE2323;">
+                           <VBox.margin>
+                              <Insets bottom="14.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="blueTheme" mnemonicParsing="false" onAction="#putBlueTheme" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #1E59F2;">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="purpleTheme" mnemonicParsing="false" onAction="#putPurpleTheme" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: purple;">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="blackTheme" mnemonicParsing="false" onAction="#putBlackTheme" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: black;" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
          </children>
       </VBox>
    </children>
