@@ -1,6 +1,5 @@
 package com.spreadsheet.pedagogicalspreadsheet.controller;
 
-import com.spreadsheet.pedagogicalspreadsheet.view.Window;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -39,7 +38,11 @@ public class Controller {
 
     protected static final State settingLanguageState = new SettingLanguageState();
 
-    protected static final State fillPrincipalState = new FillPrincipalState();
+    protected static final State filePrincipalState = new FilePrincipalState();
+    protected static final State cellPrincipalState = new CellPrincipalState();
+    protected static final State diagramPrincipalState = new DiagramPrincipalState();
+    protected static final State gamePrincipalState = new GamePrincipalState();
+    protected static final State helpPrincipalState = new HelpPrincipalState();
 
 
 
@@ -235,23 +238,47 @@ public class Controller {
 
     // ******** SPREADSHEE ******
 
+    public Button getCellNavBarButton() {
+        return cellNavBarButton;
+    }
+
     @FXML
     private Button cellNavBarButton;
 
     @FXML
     private VBox contenerSpreadsheet;
 
+    public Button getDiagramNavBarButton() {
+        return diagramNavBarButton;
+    }
+
     @FXML
     private Button diagramNavBarButton;
+
+    public Button getFileNavBarButton() {
+        return fileNavBarButton;
+    }
 
     @FXML
     private Button fileNavBarButton;
 
+    public Button getGameNavBarButton() {
+        return gameNavBarButton;
+    }
+
     @FXML
     private Button gameNavBarButton;
 
+    public Button getHelpNavBarButton() {
+        return helpNavBarButton;
+    }
+
     @FXML
     private Button helpNavBarButton;
+
+    public Button getHomeNavBarButton() {
+        return homeNavBarButton;
+    }
 
     @FXML
     private Button homeNavBarButton;
@@ -259,31 +286,37 @@ public class Controller {
     @FXML
     void goToCellFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToCellFromNavBar");
+        this.displayCellPrincipalState();
     }
 
     @FXML
     void goToDiagramFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToDiagramFromNavBar");
+        this.displayDiagramPrincipalState();
     }
 
     @FXML
     void goToFileFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToFileFromNavBar");
+        this.displayFilePrincipalState();
     }
 
     @FXML
     void goToGameFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToGameFromNavBar");
+        this.displayGamePrincipalState();
     }
 
     @FXML
     void goToHelpFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToHelpFromNavBar");
+        this.displayHelpPrincipalState();
     }
 
     @FXML
     void goToHomeFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToHomeFromNavBar");
+        this.displayHomeState();
     }
 
 
@@ -313,6 +346,17 @@ public void addStyleClassButton(Button b, String s){
 }
 public void removeStyleClassButton(Button b, String s){
     b.getStyleClass().remove(s);
+}
+
+public void changeActivedNavBarButton(Button b){
+        if(b.getStyleClass().contains("navigation-button-active")){
+            this.removeStyleClassButton(b, "navigation-button-active");
+            this.addStyleClassButton(b, "navigation-button");
+        }
+        else if(b.getStyleClass().contains("navigation-button")){
+            this.removeStyleClassButton(b, "navigation-button");
+            this.addStyleClassButton(b, "navigation-button-active");
+        }
 }
 
 // ************ STYLE CONTROLLER ***********************
@@ -378,6 +422,65 @@ public void removeStyleClassButton(Button b, String s){
         }
         catch (Exception ex){
             logger.error("**!** problem createNewSpreadsheetFromZero **!** ");
+            ex.printStackTrace();
+        }
+    }
+    public void displayHomeState(){
+        try {
+            currentState.displayHomeState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayHomeState ");
+            ex.printStackTrace();
+        }
+    }
+
+    public void displayFilePrincipalState(){
+        try {
+            currentState.displayFilePrincipalState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayFilePrincipalState ");
+            ex.printStackTrace();
+        }
+    }
+
+    public void displayCellPrincipalState(){
+        try {
+            currentState.displayCellPrincipalState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayCellPrincipalState ");
+            ex.printStackTrace();
+        }
+    }
+
+    public void displayDiagramPrincipalState(){
+        try {
+            currentState.displayDiagramPrincipalState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayDiagramPrincipalState ");
+            ex.printStackTrace();
+        }
+    }
+
+    public void displayGamePrincipalState(){
+        try {
+            currentState.displayGamePrincipalState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayGamePrincipalState ");
+            ex.printStackTrace();
+        }
+    }
+
+    public void displayHelpPrincipalState(){
+        try {
+            currentState.displayHelpPrincipalState(this);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] displayHelpPrincipalState ");
             ex.printStackTrace();
         }
     }

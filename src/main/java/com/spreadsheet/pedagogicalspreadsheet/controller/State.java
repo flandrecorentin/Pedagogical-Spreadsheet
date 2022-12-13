@@ -17,4 +17,15 @@ public interface State {
     default void displayHomeWindow(Controller c){};
 
     default  void createNewSpreadsheetFromZero(Controller c) throws IOException {};
+    default void displayFilePrincipalState(Controller c){};
+
+    default void displayCellPrincipalState(Controller c){};
+
+    default void displayDiagramPrincipalState(Controller c){};
+
+    default void displayGamePrincipalState(Controller c){};
+
+    default void displayHelpPrincipalState(Controller c){};
+
+    default void displayHomeState(Controller c){};
 }

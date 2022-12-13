@@ -80,7 +80,7 @@ public class HomeState implements  State{
                     logger.error("[ERROR] during change the stylesheet");
                 }
             }
-            Controller.setCurrentState(c.fillPrincipalState);
+            Controller.setCurrentState(c.filePrincipalState);
             logger.trace("end createNewSpreadsheetFromZero(Controller c)");
         }
         catch(Exception ex){
