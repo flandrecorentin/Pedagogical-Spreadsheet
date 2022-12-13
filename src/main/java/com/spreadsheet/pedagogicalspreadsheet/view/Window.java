@@ -22,6 +22,8 @@ public class Window extends Application {
     public static Stage windowStage;
     private final Controller controller;
 
+    public static String WindowThemeColor = "style.css";
+
     public Window() {
         logger.trace("Builder Window()");
         this.controller = new Controller();
@@ -37,6 +39,24 @@ public class Window extends Application {
         this.windowStage.setMinWidth(640);
         this.windowStage.setMinHeight(480);
         this.windowStage.setScene(scene);
+        // *** stylesheet
+        if(!this.WindowThemeColor.equals("style.css")){
+            try{
+                // get stylesheet of the root node and remove it
+                String css = scene.getRoot().getStylesheets().get(0);
+                scene.getRoot().getStylesheets().remove(0);
+                // modify the stylesheet use
+                int indexStyle = css.indexOf("style");
+                css= css.substring(0,indexStyle);
+                css += this.WindowThemeColor;
+                // set the new stylesheet
+                scene.getRoot().getStylesheets().add(css.toString());
+            }
+            catch(Exception ex){
+                logger.error("[ERROR] during change the stylesheet");
+            }
+        }
+        // *** icon
         try{
             this.windowStage.getIcons().add(new Image(getClass().getResource("/images/icon128-temporaire.png").toExternalForm()));
         }

@@ -1,5 +1,5 @@
 .button-principal-hover:hover {
-      -fx-underline: true;
+    -fx-underline: true;
 }
 
 .button-principal{
@@ -15,7 +15,7 @@
 }
 
 .pannel-principal-buttons{
-    -fx-background-color:  A5D69D;
+    -fx-background-color:  red;
 }
 .pannel-optional-buttons{
     -fx-background-color: FFFFFF;
@@ -27,7 +27,7 @@
 }
 
 .navigation-bar{
-    -fx-background-color: A5D69D;
+    -fx-background-color: red;
     -fx-border-color: black;
     -fx-border-width: 2;
 }

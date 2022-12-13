@@ -15,4 +15,6 @@ public interface State {
     default void displayParameterLanguageWindow(Controller c) {};
 
     default void displayHomeWindow(Controller c){};
+
+    default  void createNewSpreadsheetFromZero(Controller c) throws IOException {};
 }

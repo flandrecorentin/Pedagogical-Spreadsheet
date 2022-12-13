@@ -39,6 +39,8 @@ public class Controller {
 
     protected static final State settingLanguageState = new SettingLanguageState();
 
+    protected static final State fillPrincipalState = new FillPrincipalState();
+
 
 
 
@@ -59,6 +61,12 @@ public class Controller {
     }
 
     // ******************* STATE ****************
+
+
+
+
+
+
 
 
 
@@ -145,7 +153,8 @@ public class Controller {
 
     @FXML
     void newSpreadsheet(ActionEvent event) {
-        logger.trace("Button listener new spreadsheet"+this.newSpreadsheetButton.getText()+"|");
+        logger.trace("Button listener new spreadsheet |"+this.newSpreadsheetButton.getText()+"|");
+        this.createNewSpreadsheetFromZero();
     }
 
     @FXML
@@ -237,6 +246,12 @@ public class Controller {
 
 
 
+
+
+
+
+
+
 // ************ STYLE CONTROLLER ***********************
 public void addStyleClassButton(Button b, String s){
     b.getStyleClass().add(s);
@@ -300,5 +315,16 @@ public void removeStyleClassButton(Button b, String s){
         }
     }
 
+
+    // Create new SpreadsheetFromZero (Home)
+    public void createNewSpreadsheetFromZero(){
+        try {
+            currentState.createNewSpreadsheetFromZero(this);
+        }
+        catch (Exception ex){
+            logger.error("**!** problem createNewSpreadsheetFromZero **!** ");
+            ex.printStackTrace();
+        }
+    }
     // ************ CONTROLLER SETTING PARAMETER ***********************
 }
