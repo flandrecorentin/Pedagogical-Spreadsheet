@@ -13,6 +13,9 @@
     -fx-border-color: black;
     -fx-border-width: 2;
 }
+.button-principal-active:hover{
+    -fx-underline: true;
+}
 
 .pannel-principal-buttons{
     -fx-background-color:  A5D69D;
@@ -26,8 +29,45 @@
     -fx-background-color: linear-gradient(to right,A5D69D 32%,black 33%,F5EDE7 34%,F5EDE7 65%,black 66%, FFFFFF 67%, FFFFFF 100%);
 }
 
+
+
+
+/* navigation bar*/
 .navigation-bar{
+    -fx-background-color: A5D69D;
+    /*-fx-border-color: black;*/
+    /*-fx-border-width: 3;*/
+    /*-fx-border-style: hidden solid solid solid;*/
+}
+.navigation-button{
     -fx-background-color: A5D69D;
     -fx-border-color: black;
     -fx-border-width: 2;
+}
+.navigation-button:hover {
+    -fx-underline: true;
+}
+.navigation-button-active{
+    -fx-background-color: #6F995E;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+.navigation-button-active:hover{
+    -fx-underline: true;
+}
+
+
+
+
+/*nav-tools*/
+.nav-tools-bar{
+    -fx-background-color: white;
+}
+
+
+
+
+/* multi spreadsheet */
+.multi-spreadsheet-nav{
+    -fx-background-color: A5D69D;
 }

@@ -232,6 +232,61 @@ public class Controller {
     void putRedTheme(ActionEvent event) {
         logger.trace("Button listener red theme");
     }
+
+    // ******** SPREADSHEE ******
+
+    @FXML
+    private Button cellNavBarButton;
+
+    @FXML
+    private VBox contenerSpreadsheet;
+
+    @FXML
+    private Button diagramNavBarButton;
+
+    @FXML
+    private Button fileNavBarButton;
+
+    @FXML
+    private Button gameNavBarButton;
+
+    @FXML
+    private Button helpNavBarButton;
+
+    @FXML
+    private Button homeNavBarButton;
+
+    @FXML
+    void goToCellFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToCellFromNavBar");
+    }
+
+    @FXML
+    void goToDiagramFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToDiagramFromNavBar");
+    }
+
+    @FXML
+    void goToFileFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToFileFromNavBar");
+    }
+
+    @FXML
+    void goToGameFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToGameFromNavBar");
+    }
+
+    @FXML
+    void goToHelpFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToHelpFromNavBar");
+    }
+
+    @FXML
+    void goToHomeFromNavBar(ActionEvent event) {
+        logger.trace("Button listener goToHomeFromNavBar");
+    }
+
+
     // ******************* FXML ****************
 
 
