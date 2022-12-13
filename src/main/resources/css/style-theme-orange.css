@@ -1,28 +1,22 @@
-/*Stylesheet for the green theme (original theme of the application) recommended by creators of PedagogicalSpreadsheet*/
-
-
-/*home and settings*/
 .button-principal-hover:hover {
-      -fx-underline: true;
+    -fx-underline: true;
 }
 
 .button-principal{
-    -fx-background-color: #F5EDE7;
+    -fx-background-color: #FEE1AA;
     -fx-border-color: black;
     -fx-border-width: 2;
 }
 
 .button-principal-active{
-    -fx-background-color: #B9ACA2;
+    -fx-text-fill: black;
+    -fx-background-color: #AF7408;
     -fx-border-color: black;
     -fx-border-width: 2;
 }
-.button-principal-active:hover{
-    -fx-underline: true;
-}
 
 .pannel-principal-buttons{
-    -fx-background-color:  #A5D69D;
+    -fx-background-color:  FFAA0D;
 }
 .pannel-optional-buttons{
     -fx-background-color: #FFFFFF;
@@ -53,49 +47,8 @@
     -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right, #780EAA 32%, black 33%, #B41AFC 34%, #B41AFC 65%, black 66%, FED5F2 67%, FED5F2 100%);
 }
-
-
-
-
-
-
-
-
-/* navigation bar*/
 .navigation-bar{
-    -fx-background-color: A5D69D;
-    /*-fx-border-color: black;*/
-    /*-fx-border-width: 3;*/
-    /*-fx-border-style: hidden solid solid solid;*/
-}
-.navigation-button{
-    -fx-background-color: A5D69D;
+    -fx-background-color: grey;
     -fx-border-color: black;
     -fx-border-width: 2;
-}
-.navigation-button:hover {
-    -fx-underline: true;
-}
-.navigation-button-active{
-    -fx-background-color: #6F995E;
-    -fx-border-color: black;
-    -fx-border-width: 2;
-}
-.navigation-button-active:hover{
-    -fx-underline: true;
-}
-
-
-
-/*nav-tools*/
-.nav-tools-bar{
-    -fx-background-color: white;
-}
-
-
-
-
-/* multi spreadsheet */
-.multi-spreadsheet-nav{
-    -fx-background-color: A5D69D;
 }

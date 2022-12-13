@@ -131,7 +131,7 @@
                               <Insets bottom="20.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème rouge :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème orange :">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -155,11 +155,6 @@
                               <Insets bottom="20.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème noir et blanc :">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Text>
                      </children>
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -177,22 +172,21 @@
                               <Insets bottom="14.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="redTheme" mnemonicParsing="false" onAction="#putRedTheme" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: DE2323;">
+                        <Button fx:id="orangeTheme" mnemonicParsing="false" onAction="#putOrangeTheme" prefHeight="24.0" prefWidth="88.0" styleClass="button-color-theme-orange">
                            <VBox.margin>
                               <Insets bottom="14.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="blueTheme" mnemonicParsing="false" onAction="#putBlueTheme" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #1E59F2;">
+                        <Button fx:id="blueTheme" mnemonicParsing="false" onAction="#putBlueTheme" prefHeight="25.0" prefWidth="99.0" styleClass="button-color-theme-blue">
                            <VBox.margin>
                               <Insets bottom="15.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="purpleTheme" mnemonicParsing="false" onAction="#putPurpleTheme" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: purple;">
+                        <Button fx:id="purpleTheme" mnemonicParsing="false" onAction="#putPurpleTheme" prefHeight="25.0" prefWidth="90.0" styleClass="button-color-theme-purple">
                            <VBox.margin>
                               <Insets bottom="15.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="blackTheme" mnemonicParsing="false" onAction="#putBlackTheme" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: black;" />
                      </children>
                   </VBox>
                </children>

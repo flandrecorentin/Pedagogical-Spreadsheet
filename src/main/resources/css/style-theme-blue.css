@@ -1,9 +1,5 @@
-/*Stylesheet for the green theme (original theme of the application) recommended by creators of PedagogicalSpreadsheet*/
-
-
-/*home and settings*/
 .button-principal-hover:hover {
-      -fx-underline: true;
+    -fx-underline: true;
 }
 
 .button-principal{
@@ -13,19 +9,17 @@
 }
 
 .button-principal-active{
-    -fx-background-color: #B9ACA2;
-    -fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-background-color: #05347A;
+    -fx-border-color: white;
     -fx-border-width: 2;
-}
-.button-principal-active:hover{
-    -fx-underline: true;
 }
 
 .pannel-principal-buttons{
-    -fx-background-color:  #A5D69D;
+    -fx-background-color:  #5A57FF;
 }
 .pannel-optional-buttons{
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #ECF1F1;
 }
 .button-color-theme-green {
     -fx-border-color: black;
@@ -38,10 +32,10 @@
     -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right,#202020 32%,black 33%,grey 34%,grey 65%,black 66%, FFFFFF 67%, FFFFFF 100%);
 }
-.button-color-theme-blue {
+.button-color-theme-blue{
     -fx-border-color: black;
     -fx-border-width: 1;
-    -fx-background-color: linear-gradient(to right, #05347A 32%, black 33%, #5A57FF 34%, #5A57FF 65%, black 66%, ECF1F1 67%, ECF1F1 100%);
+    -fx-background-color: linear-gradient(to right,#05347A 32%,black 33%,#5A57FF 34%,#5A57FF 65%,black 66%, ECF1F1 67%, ECF1F1 100%);
 }
 .button-color-theme-orange {
     -fx-border-color: black;
@@ -54,48 +48,8 @@
     -fx-background-color: linear-gradient(to right, #780EAA 32%, black 33%, #B41AFC 34%, #B41AFC 65%, black 66%, FED5F2 67%, FED5F2 100%);
 }
 
-
-
-
-
-
-
-
-/* navigation bar*/
 .navigation-bar{
-    -fx-background-color: A5D69D;
-    /*-fx-border-color: black;*/
-    /*-fx-border-width: 3;*/
-    /*-fx-border-style: hidden solid solid solid;*/
-}
-.navigation-button{
-    -fx-background-color: A5D69D;
+    -fx-background-color: grey;
     -fx-border-color: black;
     -fx-border-width: 2;
-}
-.navigation-button:hover {
-    -fx-underline: true;
-}
-.navigation-button-active{
-    -fx-background-color: #6F995E;
-    -fx-border-color: black;
-    -fx-border-width: 2;
-}
-.navigation-button-active:hover{
-    -fx-underline: true;
-}
-
-
-
-/*nav-tools*/
-.nav-tools-bar{
-    -fx-background-color: white;
-}
-
-
-
-
-/* multi spreadsheet */
-.multi-spreadsheet-nav{
-    -fx-background-color: A5D69D;
 }

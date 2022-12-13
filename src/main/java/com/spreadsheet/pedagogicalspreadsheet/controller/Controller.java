@@ -192,8 +192,6 @@ public class Controller {
         logger.trace("Button listener french language");
     }
 
-    @FXML
-    private Button blackTheme;
 
     @FXML
     private Button blueTheme;
@@ -206,15 +204,12 @@ public class Controller {
     private Button purpleTheme;
 
     @FXML
-    private Button redTheme;
-    @FXML
-    void putBlackTheme(ActionEvent event) {
-        logger.trace("Button listener black theme");
-    }
+    private Button orangeTheme;
 
     @FXML
     void putBlueTheme(ActionEvent event) {
         logger.trace("Button listener blue theme");
+        this.changeColorTheme("style-theme-blue.css");
     }
     @FXML
     void putGreenTheme(ActionEvent event) {
@@ -231,11 +226,13 @@ public class Controller {
     @FXML
     void putPurpleTheme(ActionEvent event) {
         logger.trace("Button listener purple theme");
+        this.changeColorTheme("style-theme-purple.css");
     }
 
     @FXML
-    void putRedTheme(ActionEvent event) {
-        logger.trace("Button listener red theme");
+    void putOrangeTheme(ActionEvent event) {
+        logger.trace("Button listener orange theme");
+        this.changeColorTheme("style-theme-orange.css");
     }
 
     // ******** SPREADSHEE ******
