@@ -281,6 +281,13 @@ public class Controller {
 
     @FXML
     private Button homeNavBarButton;
+    @FXML
+    private Button homeSettingButton;
+    @FXML
+    void goToHomeFromSetting(ActionEvent event) {
+        logger.trace("Button listener goToHomeFromSetting");
+        this.displayHomeState();
+    }
 
     @FXML
     void goToCellFromNavBar(ActionEvent event) {

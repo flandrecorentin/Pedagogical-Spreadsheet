@@ -63,4 +63,39 @@ public class SettingGlobalState implements State{
         Controller.setCurrentState(c.settingLanguageState);
         logger.trace("end displayParameterLanguageWindow(Controller c)");
     }
+
+    public void displayHomeState(Controller c){
+        try{
+            logger.trace("start displayHomeState(Controller c)");
+            FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("homeView.fxml"));
+            double width = Window.windowStage.getWidth();
+            double height = Window.windowStage.getHeight();
+            Scene scene = new Scene(fxmlLoader.load(), width, height);
+            Window.windowStage.setTitle("Home [Pedagogical-Spreadsheet]");
+            Window.windowStage.setScene(scene);
+            // stylesheet
+            if(!Window.WindowThemeColor.equals("style.css")){
+                try{
+                    // get stylesheet of the root node and remove it
+                    String css = scene.getRoot().getStylesheets().get(0);
+                    scene.getRoot().getStylesheets().remove(0);
+                    // modify the stylesheet use
+                    int indexStyle = css.indexOf("style");
+                    css= css.substring(0,indexStyle);
+                    css += Window.WindowThemeColor;
+                    // set the new stylesheet
+                    scene.getRoot().getStylesheets().add(css.toString());
+                }
+                catch(Exception ex){
+                    logger.error("[ERROR] during change the stylesheet");
+                }
+            }
+            Controller.setCurrentState(c.homeState);
+            logger.trace("end displayHomeState(Controller c)");
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] during displayHomeStateWindow");
+            ex.printStackTrace();
+        }
+    }
 }

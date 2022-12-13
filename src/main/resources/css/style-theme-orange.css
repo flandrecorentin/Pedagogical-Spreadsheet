@@ -47,8 +47,42 @@
     -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right, #780EAA 32%, black 33%, #B41AFC 34%, #B41AFC 65%, black 66%, FED5F2 67%, FED5F2 100%);
 }
+/* navigation bar*/
 .navigation-bar{
-    -fx-background-color: grey;
+    -fx-background-color: FFAA0D;
+    /*-fx-border-color: black;*/
+    /*-fx-border-width: 3;*/
+    /*-fx-border-style: hidden solid solid solid;*/
+}
+.navigation-button{
+    -fx-background-color: #FEE1AA;
     -fx-border-color: black;
     -fx-border-width: 2;
+}
+.navigation-button:hover {
+    -fx-underline: true;
+}
+.navigation-button-active{
+    -fx-background-color: #AF7408;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-text-fill: black;
+}
+.navigation-button-active:hover{
+    -fx-underline: true;
+}
+
+
+
+/*nav-tools*/
+.nav-tools-bar{
+    -fx-background-color: white;
+}
+
+
+
+
+/* multi spreadsheet */
+.multi-spreadsheet-nav{
+    -fx-background-color: FFAA0D;
 }
