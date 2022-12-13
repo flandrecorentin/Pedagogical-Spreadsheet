@@ -115,7 +115,7 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème vert :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème vert (de base) :">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -123,7 +123,7 @@
                               <Insets bottom="20.0" top="2.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème orange :">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thème blanc et noir :">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -172,7 +172,7 @@
                               <Insets bottom="14.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="orangeTheme" mnemonicParsing="false" onAction="#putOrangeTheme" prefHeight="24.0" prefWidth="77.0" style="-fx-background-color: orange;">
+                        <Button fx:id="blackAndWhiteTheme" mnemonicParsing="false" onAction="#putBlackAndWitheTheme" prefHeight="24.0" prefWidth="77.0" styleClass="button-color-theme-black-and-white">
                            <VBox.margin>
                               <Insets bottom="14.0" />
                            </VBox.margin>

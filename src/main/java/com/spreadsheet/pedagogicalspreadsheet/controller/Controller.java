@@ -200,7 +200,7 @@ public class Controller {
     @FXML
     private Button greenTheme;
     @FXML
-    private Button orangeTheme;
+    private Button blackAndWhiteTheme;
 
     @FXML
     private Button purpleTheme;
@@ -219,11 +219,13 @@ public class Controller {
     @FXML
     void putGreenTheme(ActionEvent event) {
         logger.trace("Button listener green theme");
+        this.changeColorTheme("style.css");
     }
 
     @FXML
-    void putOrangeTheme(ActionEvent event) {
-        logger.trace("Button listener orange theme");
+    void putBlackAndWitheTheme(ActionEvent event) {
+        logger.trace("Button listener black and white theme");
+        this.changeColorTheme("style-theme-black-and-white.css");
     }
 
     @FXML
@@ -378,7 +380,7 @@ public void changeActivedNavBarButton(Button b){
 
 
 
-    // ************ CONTROLLER SETTING PARAMETER ***********************
+    // ************ CONTROLLER SETTING AND HOME ***********************
     public String JUnitTest(){
         return "Hello";
     }
@@ -425,6 +427,24 @@ public void changeActivedNavBarButton(Button b){
             ex.printStackTrace();
         }
     }
+
+    public void changeColorTheme(String newStyle){
+        try {
+            currentState.changeColorTheme(this, newStyle);
+        }
+        catch (Exception ex){
+            logger.error("[ERROR] changeColorTheme with the style ("+newStyle+")");
+            ex.printStackTrace();
+        }
+    }
+
+    // ************ CONTROLLER SETTING AND HOME ***********************
+
+
+
+
+
+    // ************ CONTROLLER SPREADSHEET ***********************
     public void displayHomeState(){
         try {
             currentState.displayHomeState(this);
@@ -484,5 +504,6 @@ public void changeActivedNavBarButton(Button b){
             ex.printStackTrace();
         }
     }
-    // ************ CONTROLLER SETTING PARAMETER ***********************
+
+    // ************ CONTROLLER SPREADSHEET ***********************
 }
