@@ -3,6 +3,8 @@ package com.spreadsheet.pedagogicalspreadsheet.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
@@ -143,6 +145,16 @@ public class Controller {
     @FXML
     private Button frenchLanguageButton;
 
+    public ScrollPane getScrollPane() {
+        return scrollPane;
+    }
+
+    @FXML
+    private ScrollPane scrollPane;
+
+    @FXML
+    private SplitPane spiltPane;
+
     @FXML
     void discoverGames(ActionEvent event) {
         logger.trace("Button listener discover games");
@@ -235,7 +247,7 @@ public class Controller {
         this.changeColorTheme("style-theme-orange.css");
     }
 
-    // ******** SPREADSHEE ******
+    // ******** SPREADSHEET ******
 
     public Button getCellNavBarButton() {
         return cellNavBarButton;
