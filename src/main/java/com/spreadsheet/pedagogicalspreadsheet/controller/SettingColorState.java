@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
 public class SettingColorState implements State{
     // Logger for the SettingLanguageState class
     private static final Logger logger = LoggerFactory.getLogger(SettingColorState.class);
@@ -58,10 +60,65 @@ public class SettingColorState implements State{
                 Scene scene = Window.windowStage.getScene();
                 String css = scene.getRoot().getStylesheets().get(0);
                 scene.getRoot().getStylesheets().remove(0);
+                //Remove active button Color theme
+                if(c.getBlueTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getBlueTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getBlueTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlueTheme(), "button-color-hover");
+                }
+                if(c.getPurpleTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getPurpleTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getPurpleTheme(), "button-color");
+                    c.addStyleClassButton(c.getPurpleTheme(), "button-color-hover");
+                }
+                if(c.getBlackAndWhiteTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-hover");
+                }
+                if(c.getOrangeTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getOrangeTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getOrangeTheme(), "button-color");
+                    c.addStyleClassButton(c.getOrangeTheme(), "button-color-hover");
+                }
+                if(c.getGreenTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getGreenTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getGreenTheme(), "button-color");
+                    c.addStyleClassButton(c.getGreenTheme(), "button-color-hover");
+                }
                 // modify the stylesheet use
                 int indexStyle = css.indexOf("style");
                 css= css.substring(0,indexStyle);
                 css += Window.WindowThemeColor;
+                //add the new active button color theme
+                switch (Window.WindowThemeColor){
+                    case "style.css":
+                        c.removeStyleClassButton(c.getGreenTheme(), "button-color");
+                        c.addStyleClassButton(c.getGreenTheme(), "button-color-active");
+                        c.removeStyleClassButton(c.getGreenTheme(), "button-color-hover");
+                        break;
+                    case "style-theme-black-and-white.css":
+                        c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color");
+                        c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-active");
+                        c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-hover");
+                        break;
+                    case "style-theme-blue.css":
+                        c.removeStyleClassButton(c.getBlueTheme(), "button-color");
+                        c.addStyleClassButton(c.getBlueTheme(), "button-color-active");
+                        c.removeStyleClassButton(c.getBlueTheme(), "button-color-hover");
+                        break;
+                    case "style-theme-orange.css":
+                        c.removeStyleClassButton(c.getOrangeTheme(), "button-color");
+                        c.addStyleClassButton(c.getOrangeTheme(), "button-color-active");
+                        c.removeStyleClassButton(c.getOrangeTheme(), "button-color-hover");
+                        break;
+                    case "style-theme-purple.css":
+                        c.removeStyleClassButton(c.getPurpleTheme(), "button-color");
+                        c.addStyleClassButton(c.getPurpleTheme(), "button-color-active");
+                        c.removeStyleClassButton(c.getPurpleTheme(), "button-color-hover");
+                        break;
+                }
+
                 // set the new stylesheet
                 scene.getRoot().getStylesheets().add(css.toString());
             }

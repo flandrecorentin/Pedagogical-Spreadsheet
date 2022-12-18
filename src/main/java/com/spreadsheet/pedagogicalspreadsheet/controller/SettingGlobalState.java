@@ -25,7 +25,7 @@ public class SettingGlobalState implements State{
         // Style for globalButton
         c.removeStyleClassButton(c.getGlobalSettingsButton(), "button-principal-active");
         c.addStyleClassButton(c.getGlobalSettingsButton(), "button-principal");
-        // Style for colorButton
+        // Style for colorButtonSetting
         c.removeStyleClassButton(c.getColorSettingsButton(), "button-principal");
         c.addStyleClassButton(c.getColorSettingsButton(), "button-principal-active");
         //Change pannel settings
@@ -37,6 +37,34 @@ public class SettingGlobalState implements State{
         c.getColorsSettingsPannel().setMinWidth(Region.USE_COMPUTED_SIZE);
         c.getColorsSettingsPannel().setMaxWidth(Region.USE_COMPUTED_SIZE);
         c.getColorsSettingsPannel().setVisible(true);
+        //modify style for colorThemeButton
+        if(!Window.WindowThemeColor.equals("style.css")) {
+            c.removeStyleClassButton(c.getGreenTheme(), "button-color-active");
+            c.addStyleClassButton(c.getGreenTheme(), "button-color");
+            c.addStyleClassButton(c.getGreenTheme(),"button-color-hover");
+            switch (Window.WindowThemeColor){
+                case "style-theme-black-and-white.css":
+                    c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-active");
+                    c.removeStyleClassButton(c.getBlackAndWhiteTheme(),"button-color-hover");
+                    break;
+                case "style-theme-blue.css":
+                    c.removeStyleClassButton(c.getBlueTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlueTheme(), "button-color-active");
+                    c.removeStyleClassButton(c.getBlueTheme(),"button-color-hover");
+                    break;
+                case "style-theme-orange.css":
+                    c.removeStyleClassButton(c.getOrangeTheme(), "button-color");
+                    c.addStyleClassButton(c.getOrangeTheme(), "button-color-active");
+                    c.removeStyleClassButton(c.getOrangeTheme(),"button-color-hover");
+                    break;
+                case "style-theme-purple.css":
+                    c.removeStyleClassButton(c.getPurpleTheme(), "button-color");
+                    c.addStyleClassButton(c.getPurpleTheme(), "button-color-active");
+                    c.removeStyleClassButton(c.getPurpleTheme(),"button-color-hover");
+                    break;
+            }
+        }
         // next state
         Controller.setCurrentState(c.settingColorState);
         logger.trace("end displayParameterColorWindow(Controller c)");
