@@ -22,8 +22,8 @@ public class HomeState implements  State{
         try{
             logger.trace("start displayParameterGlobalWindow(Controller c)");
             FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("settingsView.fxml"));
-            double width = Window.windowStage.getWidth();
-            double height = Window.windowStage.getHeight();
+            double width = Window.windowStage.getScene().getWidth();
+            double height = Window.windowStage.getScene().getHeight();
             Scene scene = new Scene(fxmlLoader.load(), width, height);
             Window.windowStage.setTitle("Parameters [Pedagogical-Spreadsheet]");
             Window.windowStage.setScene(scene);
@@ -58,8 +58,8 @@ public class HomeState implements  State{
         try{
             logger.trace("start createNewSpreadsheetFromZero(Controller c)");
             FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("spreadsheetView.fxml"));
-            double width = Window.windowStage.getWidth();
-            double height = Window.windowStage.getHeight();
+            double width = Window.windowStage.getScene().getWidth();
+            double height = Window.windowStage.getScene().getHeight();
             Scene scene = new Scene(fxmlLoader.load(), width, height);
             Window.windowStage.setTitle("feuille1 [Pedagogical-Spreadsheet]");
             Window.windowStage.setScene(scene);

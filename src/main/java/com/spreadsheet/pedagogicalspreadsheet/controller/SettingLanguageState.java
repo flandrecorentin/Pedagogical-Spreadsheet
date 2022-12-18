@@ -53,8 +53,8 @@ public class SettingLanguageState implements State{
         try{
             logger.trace("start displayHomeState(Controller c)");
             FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("homeView.fxml"));
-            double width = Window.windowStage.getWidth();
-            double height = Window.windowStage.getHeight();
+            double width = Window.windowStage.getScene().getWidth();
+            double height = Window.windowStage.getScene().getHeight();
             Scene scene = new Scene(fxmlLoader.load(), width, height);
             Window.windowStage.setTitle("Home [Pedagogical-Spreadsheet]");
             Window.windowStage.setScene(scene);
