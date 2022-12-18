@@ -205,8 +205,29 @@ public class Controller {
     }
 
 
+    public Button getBlueTheme() {
+        return blueTheme;
+    }
+
+    public Button getBlackAndWhiteTheme() {
+        return blackAndWhiteTheme;
+    }
+
+    public Button getPurpleTheme() {
+        return purpleTheme;
+    }
+
+    public Button getOrangeTheme() {
+        return orangeTheme;
+    }
+
     @FXML
     private Button blueTheme;
+
+    public Button getGreenTheme() {
+        return greenTheme;
+    }
+
     @FXML
     private Button greenTheme;
     @FXML

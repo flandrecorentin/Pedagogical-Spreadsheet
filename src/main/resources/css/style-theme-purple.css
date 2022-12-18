@@ -23,29 +23,33 @@
 }
 .button-color-theme-green {
     -fx-border-color: black;
-    -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right,A5D69D 32%,black 33%,F5EDE7 34%,F5EDE7 65%,black 66%, FFFFFF 67%, FFFFFF 100%);
 }
 
 .button-color-theme-black-and-white{
     -fx-border-color: black;
-    -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right,#202020 32%,black 33%,grey 34%,grey 65%,black 66%, FFFFFF 67%, FFFFFF 100%);
 }
 .button-color-theme-blue{
     -fx-border-color: black;
-    -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right,#05347A 32%,black 33%,#5A57FF 34%,#5A57FF 65%,black 66%, ECF1F1 67%, ECF1F1 100%);
 }
 .button-color-theme-orange {
     -fx-border-color: black;
-    -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right, #AF7408 32%, black 33%, #FFAA0D 34%, #FFAA0D 65%, black 66%, FEE1AA 67%, FEE1AA 100%);
 }
 .button-color-theme-purple {
     -fx-border-color: black;
-    -fx-border-width: 1;
     -fx-background-color: linear-gradient(to right, #780EAA 32%, black 33%, #B41AFC 34%, #B41AFC 65%, black 66%, FED5F2 67%, FED5F2 100%);
+}
+.button-color-hover:hover{
+    -fx-border-width : 2;
+}
+.button-color-active{
+    -fx-border-width : 4;
+}
+.button-color{
+    -fx-border-width: 1;
 }
 
 /* navigation bar*/

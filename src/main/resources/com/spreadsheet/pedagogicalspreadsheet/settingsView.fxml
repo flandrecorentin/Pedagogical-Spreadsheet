@@ -163,30 +163,54 @@
                   </VBox>
                   <VBox alignment="CENTER_RIGHT" prefHeight="177.0" prefWidth="74.0">
                      <children>
-                        <Button fx:id="greenTheme" mnemonicParsing="false" onAction="#putGreenTheme" prefHeight="24.0" prefWidth="84.0" styleClass="button-color-theme-green">
+                        <Button fx:id="greenTheme" mnemonicParsing="false" onAction="#putGreenTheme" prefHeight="24.0" prefWidth="84.0">
                            <VBox.margin>
                               <Insets bottom="14.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-color-active" />
+                              <String fx:value="button-color-theme-green" />
+                           </styleClass>
                         </Button>
-                        <Button fx:id="blackAndWhiteTheme" mnemonicParsing="false" onAction="#putBlackAndWitheTheme" prefHeight="24.0" prefWidth="77.0" styleClass="button-color-theme-black-and-white">
+                        <Button fx:id="blackAndWhiteTheme" mnemonicParsing="false" onAction="#putBlackAndWitheTheme" prefHeight="24.0" prefWidth="77.0">
                            <VBox.margin>
                               <Insets bottom="14.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-color-theme-black-and-white" />
+                              <String fx:value="button-color-hover" />
+                              <String fx:value="button-color" />
+                           </styleClass>
                         </Button>
-                        <Button fx:id="orangeTheme" mnemonicParsing="false" onAction="#putOrangeTheme" prefHeight="24.0" prefWidth="88.0" styleClass="button-color-theme-orange">
+                        <Button fx:id="orangeTheme" mnemonicParsing="false" onAction="#putOrangeTheme" prefHeight="24.0" prefWidth="88.0">
                            <VBox.margin>
                               <Insets bottom="14.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-color-theme-orange" />
+                              <String fx:value="button-color-hover" />
+                              <String fx:value="button-color" />
+                           </styleClass>
                         </Button>
-                        <Button fx:id="blueTheme" mnemonicParsing="false" onAction="#putBlueTheme" prefHeight="25.0" prefWidth="99.0" styleClass="button-color-theme-blue">
+                        <Button fx:id="blueTheme" mnemonicParsing="false" onAction="#putBlueTheme" prefHeight="25.0" prefWidth="99.0">
                            <VBox.margin>
                               <Insets bottom="15.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-color-theme-blue" />
+                              <String fx:value="button-color-hover" />
+                              <String fx:value="button-color" />
+                           </styleClass>
                         </Button>
-                        <Button fx:id="purpleTheme" mnemonicParsing="false" onAction="#putPurpleTheme" prefHeight="25.0" prefWidth="90.0" styleClass="button-color-theme-purple">
+                        <Button fx:id="purpleTheme" mnemonicParsing="false" onAction="#putPurpleTheme" prefHeight="25.0" prefWidth="90.0">
                            <VBox.margin>
                               <Insets bottom="15.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-color-theme-purple" />
+                              <String fx:value="button-color-hover" />
+                              <String fx:value="button-color" />
+                           </styleClass>
                         </Button>
                      </children>
                   </VBox>
