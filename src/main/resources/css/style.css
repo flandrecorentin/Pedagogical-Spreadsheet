@@ -57,7 +57,14 @@
 .button-color{
     -fx-border-width: 1;
 }
-
+.button-icon-home{
+    -fx-background-color:#A5D69D ;
+    -fx-border-color: black;
+    -fx-border-width :1;
+}
+.button-icon-home-hover:hover{
+    -fx-border-width: 2;
+}
 
 
 
