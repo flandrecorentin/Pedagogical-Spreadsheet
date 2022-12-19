@@ -51,6 +51,16 @@
 .button-color{
     -fx-border-width: 1;
 }
+.button-icon-home{
+    -fx-background-color:grey ;
+    -fx-border-color: black;
+    -fx-border-width :1;
+}
+.button-icon-home-hover:hover{
+    -fx-border-width: 2;
+}
+
+
 
 /* navigation bar*/
 .navigation-bar{

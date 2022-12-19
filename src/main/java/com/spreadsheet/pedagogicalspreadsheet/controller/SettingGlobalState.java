@@ -2,6 +2,8 @@ package com.spreadsheet.pedagogicalspreadsheet.controller;
 
 import com.spreadsheet.pedagogicalspreadsheet.PedagogicalSpreadsheet;
 import com.spreadsheet.pedagogicalspreadsheet.view.Window;
+import de.jensd.fx.glyphs.GlyphsDude;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcons;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;

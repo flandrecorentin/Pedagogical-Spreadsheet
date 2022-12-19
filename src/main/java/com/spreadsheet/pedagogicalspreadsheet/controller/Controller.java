@@ -9,6 +9,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.GlyphsDude;
+
 
 import java.io.IOException;
 
@@ -135,7 +138,6 @@ public class Controller {
     public Button getLanguageSettingsButton() {
         return languageSettingsButton;
     }
-
     @FXML
     private Button languageSettingsButton;
 
