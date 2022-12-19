@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -19,9 +19,9 @@
             <Button fx:id="helpNavBarButton" mnemonicParsing="false" onAction="#goToHelpFromNavBar" prefHeight="100.0" prefWidth="100.0" styleClass="navigation-button" text="Aide ?" />
          </children></HBox>
       <HBox fx:id="navToolsBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="nav-tools-bar" VBox.vgrow="NEVER" />
-      <SplitPane dividerPositions="0.99" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <SplitPane fx:id="spiltPane" dividerPositions="0.99" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: blue;" VBox.vgrow="ALWAYS">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+            <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" vbarPolicy="ALWAYS" />
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="15.0">
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS" />
