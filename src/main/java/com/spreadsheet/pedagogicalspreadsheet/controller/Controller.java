@@ -1,5 +1,6 @@
 package com.spreadsheet.pedagogicalspreadsheet.controller;
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcons;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -358,6 +359,41 @@ public class Controller {
     void goToHomeFromNavBar(ActionEvent event) {
         logger.trace("Button listener goToHomeFromNavBar");
         this.displayHomeState();
+    }
+
+    //Buttons panels white
+
+    @FXML
+    private HBox filePannel;
+    @FXML
+    private Button printToolBarButton;
+
+    @FXML
+    private Button renameToolBarButton;
+
+    @FXML
+    private Button saveAsToolBarButton;
+
+    @FXML
+    private Button saveToolBarButton;
+    @FXML
+    void printSpreadsheet(ActionEvent event) {
+        logger.trace("Button listener printSpreadsheet");
+    }
+
+    @FXML
+    void renameSpreadsheet(ActionEvent event) {
+        logger.trace("Button listener renameSpreadsheet");
+    }
+
+    @FXML
+    void saveAsSpreadsheet(ActionEvent event) {
+        logger.trace("Button listener saveAsSpreadsheet");
+    }
+
+    @FXML
+    void saveSpreadsheet(ActionEvent event) {
+        logger.trace("Button listener saveSpreadsheet");
     }
 
 
