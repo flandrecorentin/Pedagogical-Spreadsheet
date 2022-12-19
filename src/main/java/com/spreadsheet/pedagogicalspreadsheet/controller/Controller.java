@@ -396,6 +396,8 @@ public class Controller {
         logger.trace("Button listener saveSpreadsheet");
     }
 
+    @FXML
+    private HBox cellPannel;
 
     // ******************* FXML ****************
 

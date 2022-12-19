@@ -20,9 +20,9 @@
             <Button fx:id="gameNavBarButton" mnemonicParsing="false" onAction="#goToGameFromNavBar" prefHeight="100.0" prefWidth="100.0" styleClass="navigation-button" text="Jeux" />
             <Button fx:id="helpNavBarButton" mnemonicParsing="false" onAction="#goToHelpFromNavBar" prefHeight="100.0" prefWidth="100.0" styleClass="navigation-button" text="Aide ?" />
          </children></HBox>
-      <HBox fx:id="filePannel" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="nav-tools-bar" VBox.vgrow="NEVER">
+      <HBox fx:id="filePannel" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="67.0" prefWidth="600.0" styleClass="nav-tools-bar" VBox.vgrow="NEVER">
          <children>
-            <VBox fx:id="fileToolBarPannel" prefHeight="100.0" prefWidth="155.0">
+            <VBox prefHeight="100.0" prefWidth="155.0">
                <children>
                   <Button fx:id="saveToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveSpreadsheet" prefHeight="24.0" prefWidth="155.0" text="Enregistrer">
                      <graphic>
@@ -44,7 +44,7 @@
                   </Button>
                </children>
             </VBox>
-            <VBox prefHeight="100.0" prefWidth="174.0">
+            <VBox prefHeight="66.0" prefWidth="174.0">
                <children>
                   <Button fx:id="renameToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#renameSpreadsheet" prefHeight="34.0" prefWidth="175.0" text="Renommer la feuille">
                      <graphic>
@@ -67,6 +67,25 @@
                </children>
             </VBox>
          </children></HBox>
+      <HBox fx:id="cellPannel" maxHeight="0.0" minHeight="0.0" prefHeight="67.0" prefWidth="600.0" styleClass="nav-tools-bar">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="155.0">
+               <children>
+                  <Button fx:id="saveToolBarButton1" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveSpreadsheet" prefHeight="37.0" prefWidth="33.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="BOLD" size="2em" text="G" wrappingWidth="25.285714149475098" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="nav-tools-bar-button-file" />
+                        <String fx:value="nav-tools-bar-button-file-hover" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="66.0" prefWidth="174.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: grey;" />
       <SplitPane fx:id="spiltPane" dividerPositions="0.99" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: blue;" VBox.vgrow="ALWAYS">
         <items>
             <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" vbarPolicy="ALWAYS" />
