@@ -18,7 +18,6 @@ import java.util.LinkedList;
 
 public class Window extends Application {
 
-    // TODO Instaurer un fichier de configuration Log4j2 -> cela afficher uniquement les erreurs dans la console
     // Logger for the Window class
     private static final Logger logger = LoggerFactory.getLogger(Window.class);
     public static Stage windowStage;
