@@ -21,8 +21,8 @@
       <HBox fx:id="navToolsBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="nav-tools-bar" VBox.vgrow="NEVER" />
       <SplitPane fx:id="spiltPane" dividerPositions="0.99" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: blue;" VBox.vgrow="ALWAYS">
         <items>
-            <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" vbarPolicy="ALWAYS" />
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="15.0">
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" hmax="1.1" nodeOrientation="LEFT_TO_RIGHT" onScroll="#runningScrolling" onScrollFinished="#finishedScrolling" pannable="true" vbarPolicy="ALWAYS" vmax="1.1" />
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="15.0" nodeOrientation="LEFT_TO_RIGHT" scaleShape="false">
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS" />
                   <Pane prefHeight="182.0" prefWidth="443.0" style="-fx-background-color: black;" VBox.vgrow="ALWAYS" />

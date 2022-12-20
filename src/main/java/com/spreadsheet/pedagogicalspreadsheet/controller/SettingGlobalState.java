@@ -2,15 +2,11 @@ package com.spreadsheet.pedagogicalspreadsheet.controller;
 
 import com.spreadsheet.pedagogicalspreadsheet.PedagogicalSpreadsheet;
 import com.spreadsheet.pedagogicalspreadsheet.view.Window;
-import de.jensd.fx.glyphs.GlyphsDude;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcons;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
 
 public class SettingGlobalState implements State{
     // Logger for the SettingGlobalState class

@@ -74,7 +74,7 @@
 
 /* navigation bar*/
 .navigation-bar{
-    -fx-background-color: A5D69D;
+    -fx-background-color: #A5D69D;
     /*-fx-border-color: black;*/
     /*-fx-border-width: 3;*/
     /*-fx-border-style: hidden solid solid solid;*/
@@ -108,5 +108,33 @@
 
 /* multi spreadsheet */
 .multi-spreadsheet-nav{
-    -fx-background-color: A5D69D;
+    -fx-background-color: #A5D69D;
+}
+
+
+
+
+
+
+
+
+
+
+/* spreadsheet */
+.border-test{
+    -fx-border-color: red;
+    -fx-border-width: 2;
+}
+.firstLine{
+    -fx-background-color: #F0EFEF;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.cell-view{
+    /*-fx-skin: "CellView";*/
+    -fx-background-color: #F0EFEF;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
 }

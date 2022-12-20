@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
@@ -154,6 +155,14 @@ public class Controller {
     @FXML
     private ScrollPane scrollPane;
 
+    @FXML
+    void finishedScrolling(ScrollEvent event) {
+//        logger.trace("ScrollEvent finishedScrolling");
+    }
+    @FXML
+    void runningScrolling(ScrollEvent event) {
+//        logger.trace("ScrollEvent runningScrolling"+event.getDeltaY());
+    }
     @FXML
     private SplitPane spiltPane;
 

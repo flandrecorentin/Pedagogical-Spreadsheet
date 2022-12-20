@@ -1,22 +1,25 @@
 package com.spreadsheet.pedagogicalspreadsheet.controller;
 
+import com.spreadsheet.pedagogicalspreadsheet.model.objects.Spreadsheet;
+import com.spreadsheet.pedagogicalspreadsheet.view.SpreadsheetView;
 import com.spreadsheet.pedagogicalspreadsheet.view.Window;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.geometry.Orientation;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 public class FilePrincipalState implements State {
     private static final Logger logger = LoggerFactory.getLogger(FilePrincipalState.class);
 
     @Override
     public void displayHomeState(Controller c){
+        // need to change the place of this methods
         logger.trace("start displayHomeState(Controller c)");
+        logger.debug("************************ start spreadsheetView");
+        Spreadsheet spreadsheet = new Spreadsheet("feuille1");
+        Window.spreadsheets.add(spreadsheet);
+        logger.debug("Spreadsheets of the window: "+ Window.spreadsheets.toString());
+        SpreadsheetView customComponentTest = new SpreadsheetView(spreadsheet);
+        c.getScrollPane().setContent(customComponentTest);
+        logger.debug("************************ end spreadsheetView");
         logger.trace("end start displayHomeState(Controller c)");
     }
     @Override
