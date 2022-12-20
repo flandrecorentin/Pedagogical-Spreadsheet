@@ -61,30 +61,27 @@ public class SettingColorState implements State{
                 String css = scene.getRoot().getStylesheets().get(0);
                 scene.getRoot().getStylesheets().remove(0);
                 //Remove active button Color theme
-                if(c.getBlueTheme().getStyleClass().contains("button-color-active")) {
-                    c.removeStyleClassButton(c.getBlueTheme(), "button-color-active");
-                    c.addStyleClassButton(c.getBlueTheme(), "button-color");
-                    c.addStyleClassButton(c.getBlueTheme(), "button-color-hover");
-                }
-                if(c.getPurpleTheme().getStyleClass().contains("button-color-active")) {
-                    c.removeStyleClassButton(c.getPurpleTheme(), "button-color-active");
-                    c.addStyleClassButton(c.getPurpleTheme(), "button-color");
-                    c.addStyleClassButton(c.getPurpleTheme(), "button-color-hover");
-                }
-                if(c.getBlackAndWhiteTheme().getStyleClass().contains("button-color-active")) {
-                    c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-active");
-                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color");
-                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-hover");
-                }
-                if(c.getOrangeTheme().getStyleClass().contains("button-color-active")) {
-                    c.removeStyleClassButton(c.getOrangeTheme(), "button-color-active");
-                    c.addStyleClassButton(c.getOrangeTheme(), "button-color");
-                    c.addStyleClassButton(c.getOrangeTheme(), "button-color-hover");
-                }
+
                 if(c.getGreenTheme().getStyleClass().contains("button-color-active")) {
                     c.removeStyleClassButton(c.getGreenTheme(), "button-color-active");
                     c.addStyleClassButton(c.getGreenTheme(), "button-color");
                     c.addStyleClassButton(c.getGreenTheme(), "button-color-hover");
+                } else if(c.getPurpleTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getPurpleTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getPurpleTheme(), "button-color");
+                    c.addStyleClassButton(c.getPurpleTheme(), "button-color-hover");
+                } else if(c.getBlackAndWhiteTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlackAndWhiteTheme(), "button-color-hover");
+                }else if(c.getOrangeTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getOrangeTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getOrangeTheme(), "button-color");
+                    c.addStyleClassButton(c.getOrangeTheme(), "button-color-hover");
+                }else if(c.getBlueTheme().getStyleClass().contains("button-color-active")) {
+                    c.removeStyleClassButton(c.getBlueTheme(), "button-color-active");
+                    c.addStyleClassButton(c.getBlueTheme(), "button-color");
+                    c.addStyleClassButton(c.getBlueTheme(), "button-color-hover");
                 }
                 // modify the stylesheet use
                 int indexStyle = css.indexOf("style");

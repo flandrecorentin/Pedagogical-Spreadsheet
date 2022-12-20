@@ -54,10 +54,10 @@
 .button-icon-home{
     -fx-background-color:#5A57FF ;
     -fx-border-color: black;
-    -fx-border-width :1;
+    -fx-border-width :2;
 }
 .button-icon-home-hover:hover{
-    -fx-border-width: 2;
+    -fx-border-width: 3;
 }
 
 /* navigation bar*/
@@ -91,7 +91,14 @@
 .nav-tools-bar{
     -fx-background-color: white;
 }
-
+.nav-tools-bar-button-file{
+    -fx-background-color: white;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+.nav-tools-bar-button-file-hover:hover{
+    -fx-underline: true;
+}
 
 
 

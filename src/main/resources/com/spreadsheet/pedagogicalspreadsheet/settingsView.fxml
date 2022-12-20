@@ -15,7 +15,7 @@
    <children>
       <VBox maxWidth="300.0" minWidth="300.0" prefHeight="457.0" prefWidth="225.0" styleClass="pannel-principal-buttons">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="36.0" mnemonicParsing="false" onAction="#goToHomeFromSetting" prefHeight="52.0" prefWidth="54.0">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="40.0" mnemonicParsing="false" onAction="#goToHomeFromSetting" prefHeight="46.0" prefWidth="54.0">
                <graphic>
                   <FontAwesomeIcon glyphName="HOME" size="2.8em" textAlignment="CENTER" wrappingWidth="52.92142868041992" />
                </graphic>
@@ -29,7 +29,7 @@
             </Button>
             <Button fx:id="globalSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="true" onAction="#globalSettings" prefHeight="40.0" prefWidth="240.0" text="Global">
                <VBox.margin>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="100.0" />
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="60.0" />
                </VBox.margin>
                <styleClass>
                   <String fx:value="button-principal-active" />
