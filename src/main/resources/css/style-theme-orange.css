@@ -59,6 +59,14 @@
 .button-icon-home-hover:hover{
     -fx-border-width: 3;
 }
+.button-language{
+    -fx-background-color: #FFFFFF;
+}
+.button-language-hover:hover {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+}
+
 /* navigation bar*/
 .navigation-bar{
     -fx-background-color: FFAA0D;
