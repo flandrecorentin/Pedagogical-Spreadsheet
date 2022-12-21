@@ -13,7 +13,11 @@ public class CellPrincipalState implements State{
         c.changeActivedNavBarButton(c.getCellNavBarButton());
         c.changeActivedNavBarButton(c.getFileNavBarButton());
         // display diagramNavToolsBar
-
+        c.getCellPannel().setVisible(false);
+        c.getCellPannel().setMinHeight(0);
+        c.getCellPannel().setMaxHeight(0);
+        c.getPaneToolBar().getChildren().add(c.getFilePannel());
+        Controller.setCurrentState(c.filePrincipalState);
         Controller.setCurrentState(c.filePrincipalState);
         logger.trace("end start displayFilePrincipalState(Controller c)");
     }
@@ -26,7 +30,7 @@ public class CellPrincipalState implements State{
         c.changeActivedNavBarButton(c.getCellNavBarButton());
         c.changeActivedNavBarButton(c.getDiagramNavBarButton());
         // display diagramNavToolsBar
-
+        c.getPaneToolBar().getChildren().remove(c.getCellPannel());
         Controller.setCurrentState(c.diagramPrincipalState);
         logger.trace("end start displayDiagramPrincipalState(Controller c)");
     }
@@ -38,7 +42,7 @@ public class CellPrincipalState implements State{
         c.changeActivedNavBarButton(c.getCellNavBarButton());
         c.changeActivedNavBarButton(c.getGameNavBarButton());
         // display gameNavToolsBar
-
+        c.getPaneToolBar().getChildren().remove(c.getCellPannel());
         Controller.setCurrentState(c.gamePrincipalState);
         logger.trace("end start displayGamePrincipalState(Controller c)");
     }
@@ -50,6 +54,7 @@ public class CellPrincipalState implements State{
         c.changeActivedNavBarButton(c.getCellNavBarButton());
         c.changeActivedNavBarButton(c.getHelpNavBarButton());
         // display gameNavToolsBar
+        c.getPaneToolBar().getChildren().remove(c.getCellPannel());
 
         Controller.setCurrentState(c.helpPrincipalState);
         logger.trace("end start displayHelpPrincipalState(Controller c)");

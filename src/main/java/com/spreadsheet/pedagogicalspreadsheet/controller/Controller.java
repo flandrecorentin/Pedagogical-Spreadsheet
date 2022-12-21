@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -280,8 +281,19 @@ public class Controller {
     @FXML
     private Button cellNavBarButton;
 
+    public VBox getContenerSpreadsheet() {
+        return contenerSpreadsheet;
+    }
+
     @FXML
     private VBox contenerSpreadsheet;
+
+    public Pane getPaneToolBar() {
+        return paneToolBar;
+    }
+
+    @FXML
+    private Pane paneToolBar;
 
     public Button getDiagramNavBarButton() {
         return diagramNavBarButton;
@@ -362,6 +374,14 @@ public class Controller {
     }
 
     //Buttons panels white
+
+    public HBox getFilePannel() {
+        return filePannel;
+    }
+
+    public HBox getCellPannel() {
+        return cellPannel;
+    }
 
     @FXML
     private HBox filePannel;
