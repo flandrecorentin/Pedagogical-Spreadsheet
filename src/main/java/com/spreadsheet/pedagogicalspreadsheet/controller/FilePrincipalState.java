@@ -20,6 +20,9 @@ public class FilePrincipalState implements State {
         logger.debug("Spreadsheets of the window: "+ Window.spreadsheets.toString());
         SpreadsheetView customComponentTest = new SpreadsheetView(spreadsheet);
         c.getScrollPane().setContent(customComponentTest);
+        logger.debug("size scrollpane"+ c.getScrollPane().getHeight()+"   "+ c.getScrollPane().getWidth());
+//        logger.debug("content:"+ c.getScrollPane().getContent().);
+//        logger.debug("size scrollpane"+ c.getScrollPane().getContent().get+"   "+ c.getScrollPane().getWidth());
         logger.debug("************************ end spreadsheetView");
         logger.trace("end start displayHomeState(Controller c)");
     }

@@ -7,8 +7,8 @@ public class Spreadsheet implements SpreadsheetInterface{
     /********************** ATTRIBUTES **************************/
 
     private String name;
-    private int nbColumns;
-    private int nbRows;
+    private int nbColumns = 28;
+    private int nbRows = 50;
     private LinkedList<Cell> modifiedCell;
     // private LinkedList<Diagram> createdDiagram
 
@@ -24,14 +24,10 @@ public class Spreadsheet implements SpreadsheetInterface{
 
     public Spreadsheet() {
         modifiedCell = new LinkedList<Cell>();
-        nbColumns = 26;
-        nbRows = 50;
     }
     public Spreadsheet(String name) {
         this.name = name;
         this.modifiedCell = new LinkedList<Cell>();
-        nbColumns = 26;
-        nbRows = 50;
     }
 
 
@@ -66,8 +62,9 @@ public class Spreadsheet implements SpreadsheetInterface{
         return nbRows;
     }
 
-
-
+    public LinkedList<Cell> getModifiedCell() {
+        return modifiedCell;
+    }
 
 
 

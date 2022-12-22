@@ -135,10 +135,6 @@
 
 
 /* spreadsheet */
-.border-test{
-    -fx-border-color: red;
-    -fx-border-width: 2;
-}
 .firstLine{
     -fx-background-color: #F0EFEF;
     -fx-border-color: black;
