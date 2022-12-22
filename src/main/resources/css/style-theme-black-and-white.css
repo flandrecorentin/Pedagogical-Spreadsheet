@@ -108,6 +108,9 @@
 .nav-tools-bar-button-file-hover:hover{
     -fx-underline: true;
 }
+.nav-tools-bar-button-cell-hover:hover{
+    -fx-background-color: #c8cac9;
+}
 
 
 

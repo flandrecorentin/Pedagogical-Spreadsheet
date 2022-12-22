@@ -20,6 +20,7 @@ public class HomeState implements  State{
     @Override
     public void displayParameterGlobalWindow(Controller c) throws IOException {
         try{
+
             logger.trace("start displayParameterGlobalWindow(Controller c)");
             FXMLLoader fxmlLoader = new FXMLLoader(PedagogicalSpreadsheet.class.getResource("settingsView.fxml"));
             double width = Window.windowStage.getScene().getWidth();
@@ -63,6 +64,7 @@ public class HomeState implements  State{
             Scene scene = new Scene(fxmlLoader.load(), width, height);
             Window.windowStage.setTitle("feuille1 [Pedagogical-Spreadsheet]");
             Window.windowStage.setScene(scene);
+
             // stylesheet
             if(!Window.WindowThemeColor.equals("style.css")){
                 try{

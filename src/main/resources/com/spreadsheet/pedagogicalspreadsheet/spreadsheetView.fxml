@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<VBox fx:id="contenerSpreadsheet" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
+<VBox fx:id="contenerSpreadsheet" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spreadsheet.pedagogicalspreadsheet.controller.Controller">
    <children>
       <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="200.0" styleClass="navigation-bar" VBox.vgrow="NEVER">
          <children>
@@ -16,13 +26,13 @@
             <Button fx:id="gameNavBarButton" mnemonicParsing="false" onAction="#goToGameFromNavBar" prefHeight="100.0" prefWidth="100.0" styleClass="navigation-button" text="Jeux" />
             <Button fx:id="helpNavBarButton" mnemonicParsing="false" onAction="#goToHelpFromNavBar" prefHeight="100.0" prefWidth="100.0" styleClass="navigation-button" text="Aide ?" />
          </children></HBox>
-      <Pane fx:id="paneToolBar" prefHeight="67.0" prefWidth="600.0" styleClass="nav-tools-bar">
+      <Pane fx:id="paneToolBar" prefHeight="78.0" prefWidth="600.0" styleClass="nav-tools-bar">
          <children>
-            <HBox fx:id="filePannel" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="67.0" prefWidth="600.0" styleClass="nav-tools-bar">
+            <HBox fx:id="filePannel" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="78.0" prefWidth="600.0" styleClass="nav-tools-bar">
                <children>
-                  <VBox prefHeight="100.0" prefWidth="155.0">
+                  <VBox prefHeight="104.0" prefWidth="155.0">
                      <children>
-                        <Button fx:id="saveToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveSpreadsheet" prefHeight="24.0" prefWidth="155.0" text="Enregistrer">
+                        <Button fx:id="saveToolBarButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#saveSpreadsheet" prefHeight="46.0" prefWidth="155.0" text="Enregistrer">
                            <graphic>
                               <FontAwesomeIcon glyphName="SAVE" size="2em" wrappingWidth="37.2857141494751" />
                            </graphic>
@@ -31,7 +41,7 @@
                               <String fx:value="nav-tools-bar-button-file-hover" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="saveAsToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveAsSpreadsheet" prefHeight="24.0" prefWidth="155.0" text="Enregistrer sous">
+                        <Button fx:id="saveAsToolBarButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#saveAsSpreadsheet" prefHeight="41.0" prefWidth="155.0" text="Enregistrer sous">
                            <graphic>
                               <FontAwesomeIcon glyphName="DOWNLOAD" size="2em" wrappingWidth="35.285715103149414" />
                            </graphic>
@@ -44,7 +54,7 @@
                   </VBox>
                   <VBox prefHeight="66.0" prefWidth="174.0">
                      <children>
-                        <Button fx:id="renameToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#renameSpreadsheet" prefHeight="34.0" prefWidth="175.0" text="Renommer la feuille">
+                        <Button fx:id="renameToolBarButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#renameSpreadsheet" prefHeight="49.0" prefWidth="174.0" text="Renommer la feuille">
                            <graphic>
                               <FontAwesomeIcon glyphName="PENCIL" size="2em" wrappingWidth="30.285714149475098" />
                            </graphic>
@@ -53,7 +63,7 @@
                               <String fx:value="nav-tools-bar-button-file-hover" />
                            </styleClass>
                         </Button>
-                        <Button fx:id="printToolBarButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#printSpreadsheet" prefHeight="34.0" prefWidth="176.0" text="Imprimer">
+                        <Button fx:id="printToolBarButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#printSpreadsheet" prefHeight="44.0" prefWidth="174.0" text="Imprimer">
                            <graphic>
                               <FontAwesomeIcon glyphName="PRINT" size="2em" wrappingWidth="32.285715103149414" />
                            </graphic>
@@ -66,30 +76,147 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="cellPannel" maxHeight="0.0" minHeight="0.0" prefHeight="67.0" prefWidth="600.0" styleClass="nav-tools-bar" visible="false">
+            <HBox fx:id="cellPannel" maxHeight="0.0" minHeight="0.0" prefHeight="78.0" prefWidth="600.0" styleClass="nav-tools-bar" visible="false">
                <children>
-                  <VBox prefHeight="100.0" prefWidth="155.0">
+                  <VBox prefHeight="101.0" prefWidth="35.0">
                      <children>
-                        <Button fx:id="saveToolBarButton1" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveSpreadsheet" prefHeight="37.0" prefWidth="33.0">
+                        <Button fx:id="boldToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#putInBold" prefHeight="26.0" prefWidth="26.0">
                            <graphic>
-                              <FontAwesomeIcon glyphName="BOLD" size="2em" text="G" wrappingWidth="25.285714149475098" />
+                              <FontAwesomeIcon glyphName="BOLD" size="1.3em" text="" textAlignment="CENTER" wrappingWidth="17.0" />
                            </graphic>
                            <styleClass>
                               <String fx:value="nav-tools-bar-button-file" />
-                              <String fx:value="nav-tools-bar-button-file-hover" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
                            </styleClass>
+                        </Button>
+                        <Button fx:id="alignRightToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#alignRight" prefHeight="26.0" prefWidth="35.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ALIGN_LEFT" size="1.3em" wrappingWidth="11.600000381469727" />
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="35.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CHEVRON_UP" size="1.3em" />
+                           </graphic>
                         </Button>
                      </children>
                   </VBox>
-                  <VBox prefHeight="66.0" prefWidth="174.0" />
+                  <VBox prefHeight="111.0" prefWidth="27.0">
+                     <children>
+                        <Button fx:id="italicToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#putInItalic" prefHeight="24.0" prefWidth="45.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ITALIC" size="1.3em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="alignCenterToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#alignCenter" prefHeight="26.0" prefWidth="35.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ALIGN_CENTER" size="1.3em" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="35.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ARROW_UP" size="1.3em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="111.0" prefWidth="27.0">
+                     <children>
+                        <Button fx:id="underlineToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#underlineText" prefHeight="24.0" prefWidth="45.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="UNDERLINE" size="1.3em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="alignLeftToolBarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#alignLeft" prefHeight="26.0" prefWidth="35.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ALIGN_RIGHT" size="1.3em" />
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="35.0">
+                           <styleClass>
+                              <String fx:value="nav-tools-bar-button-file" />
+                              <String fx:value="nav-tools-bar-button-cell-hover" />
+                           </styleClass>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ARROW_UP" size="1.3em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="21.0" prefWidth="72.0">
+                     <children>
+                        <ComboBox fx:id="sizeTextToolBarComboBox" prefHeight="25.0" prefWidth="86.0" promptText="11" styleClass="nav-tools-bar-button-file" />
+                        <BorderPane prefHeight="200.0" prefWidth="72.0" styleClass="nav-tools-bar-button-file">
+                           <left>
+                              <FontAwesomeIcon BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" />
+                                 </BorderPane.margin>
+                              </FontAwesomeIcon>
+                           </left>
+                           <right>
+                              <ColorPicker prefHeight="18.0" prefWidth="40.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                 <value>
+                                    <Color red="1.0" />
+                                 </value></ColorPicker>
+                           </right>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="72.0" styleClass="nav-tools-bar-button-file">
+                           <right>
+                              <ColorPicker prefHeight="27.0" prefWidth="40.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                 <value>
+                                    <Color red="1.0" green="1.0" />
+                                 </value></ColorPicker>
+                           </right>
+                           <left>
+                              <FontAwesomeIcon glyphName="FILE_TEXT" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets left="10.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </FontAwesomeIcon>
+                           </left>
+                        </BorderPane>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
          </children>
       </Pane>
-      <HBox prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: grey;" />
+      <HBox prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: grey;" />
       <SplitPane fx:id="spiltPane" dividerPositions="0.99" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
         <items>
-            <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" hmax="1.1" nodeOrientation="LEFT_TO_RIGHT" onScroll="#runningScrolling" onScrollFinished="#finishedScrolling" pannable="true" vbarPolicy="ALWAYS" vmax="1.1" />
+            <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS" hmax="1.1" nodeOrientation="LEFT_TO_RIGHT" onScroll="#runningScrolling" onScrollFinished="#finishedScrolling" pannable="true" prefHeight="170.0" prefWidth="577.0" vbarPolicy="ALWAYS" vmax="1.1" />
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="15.0" nodeOrientation="LEFT_TO_RIGHT" scaleShape="false">
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS" />

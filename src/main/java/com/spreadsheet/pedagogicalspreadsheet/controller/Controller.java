@@ -4,6 +4,7 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcons;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
 import javafx.scene.input.ScrollEvent;
@@ -297,12 +298,6 @@ public class Controller {
     @FXML
     private VBox contenerSpreadsheet;
 
-    public Pane getPaneToolBar() {
-        return paneToolBar;
-    }
-
-    @FXML
-    private Pane paneToolBar;
 
     public Button getDiagramNavBarButton() {
         return diagramNavBarButton;
@@ -425,8 +420,66 @@ public class Controller {
         logger.trace("Button listener saveSpreadsheet");
     }
 
+    //Cell Pannel Tool Bar
     @FXML
     private HBox cellPannel;
+    @FXML
+    private Button alignCenterToolBarButton;
+
+    @FXML
+    private Button alignLeftToolBarButton;
+
+    @FXML
+    private Button alignRightToolBarButton;
+
+    @FXML
+    private Button boldToolBarButton;
+    @FXML
+    private Button italicToolBarButton;
+    @FXML
+    private Button underlineToolBarButton;
+
+    @FXML
+    void alignCenter(ActionEvent event) {
+        logger.trace("Button listener AlignCenter");
+    }
+
+    @FXML
+    void alignLeft(ActionEvent event) {
+        logger.trace("Button listener AlignLeft");
+    }
+
+    @FXML
+    void alignRight(ActionEvent event) {
+        logger.trace("Button listener AlignRight");
+    }
+    @FXML
+    void putInBold(ActionEvent event) {
+        logger.trace("button listener putInBold");
+    }
+
+    @FXML
+    void putInItalic(ActionEvent event) {
+        logger.trace("button listener putInItalic");
+    }
+    @FXML
+    void underlineText(ActionEvent event) {
+        logger.trace("button listener underlineText");
+    }
+    public Pane getPaneToolBar() {
+        return paneToolBar;
+    }
+
+    @FXML
+    private Pane paneToolBar;
+
+    public ComboBox<Integer> getSizeTextToolBarComboBox() {
+        return sizeTextToolBarComboBox;
+    }
+
+    @FXML
+    private ComboBox<Integer> sizeTextToolBarComboBox;
+
 
     // ******************* FXML ****************
 
@@ -608,6 +661,7 @@ public void changeActivedNavBarButton(Button b){
         catch (Exception ex){
             logger.error("[ERROR] displayHelpPrincipalState ");
             ex.printStackTrace();
+            //getCellPannel().getChildren().addAll(GlyphsDude).createIcon(FontAwesomeIcons.FILTE
         }
     }
 
